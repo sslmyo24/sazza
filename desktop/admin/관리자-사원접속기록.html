@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>관리자계정-사원접속기록</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/employee.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../assets/js/common.min.js"></script>
+</head>
+<body>
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="http://sazza.kr/design//members/lists-client.html">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="../assets/images/common/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">전체회원</a></li>
+                    <li><a href="http://sazza.kr/design//members/lists-sazza.html">사짜회원</a></li>
+                    <li class="active"><a href="http://sazza.kr/design//members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+
+
+            <div class="page-header no-border">
+                <h2 class="page-title">관리자 계정 관리</h2>
+            </div>
+
+            <ul class="common-tab">
+                <li><a href="./관리자계정-사원현황.html">사원 현황</a></li>
+                <li class="active"><a href="">사원 접속 기록</a></li>
+            </ul>
+
+            <div class="page-content bWhite P35">
+                <h4 class="content-title">사원 접속 기록</h4>
+                <div class="search-form">
+                    <input type="text" class="form-control W240 MR5" placeholder="이름 or 아이디">
+                    <button type="button" class="btn-search MR35">검색</button>
+                    <div class="form-control-select W150">
+                        <select>
+                            <option value="" selected disabled hidden>부서</option>
+                            <option value="전체">전체</option>
+                            <option value="CEO">CEO</option>
+                            <option value="이사">이사</option>
+                            <option value="개발팀">개발팀</option>
+                            <option value="관리팀">관리팀</option>
+                            <option value="홍보팀">홍보팀</option>
+                            <option value="영업팀">영업팀</option>
+                            <option value="지사">지사</option>
+                        </select>
+                    </div>
+                    <div class="form-control-select W150 MR5">
+                        <select>
+                            <option value="" selected disabled hidden>상태</option>
+                            <option style="height: 100px;" value="전체">전체</option>
+                            <option value="사용">사용</option>
+                            <option value="정지">정지</option>
+                            <option value="퇴사">퇴사</option>
+                            <option value="삭제">삭제</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn-search MR10">검색</button>
+                </div>
+                <table class="table log-table" cellspacing="0">
+                    <caption>※ 사원 목록: ( 명)</caption>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>아이디</th>
+                            <th>성명</th>
+                            <th>부서</th>
+                            <th>직위</th>
+                            <th>직통전화</th>
+                            <th>휴대폰</th>
+                            <th>로그인IP주소</th>
+                            <th>접속 일시</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="W80"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="W120"></td>
+                            <td class="W120"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="flexible"></td>
+                            <td class="W160">20.03.12 (월) 13:55</td>
+                        </tr>
+                        <tr>
+                            <td class="W80"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="W120"></td>
+                            <td class="W120"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="flexible"></td>
+                            <td class="W160"></td>
+                        </tr>
+                        <tr>
+                            <td class="W80"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="W120"></td>
+                            <td class="W120"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="flexible"></td>
+                            <td class="W160"></td>
+                        </tr>
+                        <tr>
+                            <td class="W80"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="W120"></td>
+                            <td class="W120"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="flexible"></td>
+                            <td class="W160"></td>
+                        </tr>
+                        <tr>
+                            <td class="W80"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="W120"></td>
+                            <td class="W120"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="flexible"></td>
+                            <td class="W160"></td>
+                        </tr>
+                        <tr>
+                            <td class="W80"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="W120"></td>
+                            <td class="W120"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="flexible"></td>
+                            <td class="W160"></td>
+                        </tr>
+                        <tr>
+                            <td class="W80"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="W120"></td>
+                            <td class="W120"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="flexible"></td>
+                            <td class="W160"></td>
+                        </tr>
+                        <tr>
+                            <td class="W80"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="W120"></td>
+                            <td class="W120"></td>
+                            <td class="W160"></td>
+                            <td class="W160"></td>
+                            <td class="flexible"></td>
+                            <td class="W160"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+
+.member-form .form-section {
+	display: flex;
+	margin-bottom: 20px;
+	align-items: center;
+}
+
+.member-form .form-name {
+	width: 90px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.member-form .form-control {
+	width: 473px;
+	height: 40px;
+}
+
+.member-form > .member-btns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.member-form > .divider {
+	width: 100%;
+	height: 1px;
+	background: #c4c4c4;
+	margin-bottom: 20px;
+}
+
+.member-form button {
+	width: 160px;
+	height: 40px;
+	border-radius: 3px;
+	font-size: 15px;
+}
+
+.member-form .form-btns > button {
+	color: #fff;
+	border: none;
+}
+
+.member-form .btn-action {
+	margin-right: 5px;
+}
+
+.member-form .btn-option {
+	background: #f7f7f7;
+	color: #3384ed;
+	border: 1px solid #3384ed;
+}
+
+#optionModal {
+	z-index: -1;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: .3s opacity;
+}
+
+#optionModal:target {
+	opacity: 1 !important;
+	z-index: 100;
+}
+
+#optionModal > .wrap {
+	width: 862px;
+	border: 1px solid #3384ed;
+	box-sizing: border-box;
+}
+
+#optionModal .modal-header {
+	height: 53px;
+	color: #fff;
+	text-align: center;
+	line-height: 53px;
+	font-size: 20px;
+	position: relative;
+}
+
+#optionModal .modal-close {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 20px;
+	top: 0;
+	color: #fff;
+	font-size: 12px;
+}
+
+#deleteModal .modal-close {
+	color: #fff;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	font-size: 12px;
+}
+
+.modal-content {
+	background: #f1f1f1;
+	padding: 33px 40px 80px;
+	box-sizing: border-box;
+}
+
+.modal-content > .content-header {
+	display: flex;
+	align-items: center;
+}
+
+.modal-content .modal-content-title {
+	font-size: 15px;
+}
+
+.modal-content > .content-header > .checkbox {
+	margin-left: 15px;
+}
+
+.modal-content > table {
+	margin-bottom: 30px;
+}
+
+.modal-content > table > caption {
+	padding: 0;
+	padding-bottom: 10px;
+	caption-side: top;
+	text-align: right;
+	font-size: 15px;
+}
+
+.modal-content > table td > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content > table td .radio {
+	margin-left: 10px;
+}
+
+.modal-content > .set-state > .modal-content-title {
+	margin-right: 25px;
+}
+
+.modal-content > .set-state > .option-name {
+	margin-right: 7px;
+}
+
+.modal-content > .set-state > .radio {
+	margin-right: 20px;
+}
+
+.modal-content > .modal-btns {
+	margin-top: 45px;
+	display: flex;
+	justify-content: center;
+}
+
+.modal-content > .modal-btns > button {
+	border-radius: 3px;
+	width: 160px;
+	height: 35px;
+	box-sizing: border-box;
+}
+
+.modal-content > .modal-btns > .btn-submit {
+	margin-right: 14px;
+	border: 1px solid #3384ed;
+	color: #3384ed;
+}
+
+.modal-content > .modal-btns > .btn-cancel {
+	border: 1px solid #2b2b2b;
+	color: #2b2b2b;
+}
+

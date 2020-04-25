@@ -1,0 +1,60 @@
+.common-tab > li > a {
+	width: 150px;
+}
+
+.search-form {
+	background: transparent;
+	padding: 0;
+	margin-top: 23px;
+	margin-bottom: 20px;
+}
+
+.search-form select {
+	-webkit-appearance: menulist;
+	-moz-appearance: menulist;
+	appearance: menulist;
+	outline: none;
+	border: 1px solid rgb(220, 220, 220) !important;
+}
+
+.search-form > .btn-search {
+	width: 78px;
+	height: 40px;
+	font-size: 13px;
+	border-radius: 2px;
+}
+
+.search-form > .btn-option {
+	color: #fff;
+	background: #f7f7f7;
+	color: #3384ed;
+	border: 1px solid #3384ed;
+	height: 40px;
+	border-radius: 3px;
+	width: 160px;
+	font-size: 14px;
+}
+
+.page-content caption {
+	caption-side: top ;
+	text-align: left;
+	font-size: 15px;
+}
+
+.page-content > table th {
+	font-size: 13px;
+}
+
+.page-content > table td {
+	text-align: center;
+}
+
+.page-content > .status-table td:last-child {
+	color: #3384ed;
+}
+
+.page-content > .log-table td:last-child {
+	font-size: 13px;
+}
+
+

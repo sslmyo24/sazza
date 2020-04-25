@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>관리자계정-관리자공지</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/notice.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../../assets/js/common.min.js"></script>
+</head>
+<body>
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="http://sazza.kr/design//members/lists-client.html">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="../../assets/images/common/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">전체회원</a></li>
+                    <li><a href="http://sazza.kr/design//members/lists-sazza.html">사짜회원</a></li>
+                    <li class="active"><a href="http://sazza.kr/design//members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+    
+            <section class="scroll-body">
+                <div class="page-header PB90">
+                    <h2 class="page-title">공지사항 관리</h2>
+                </div>
+                
+                <div class="page-content bWhite P35">
+                    <h4 class="content-title">공지사항등록</h4>
+                
+                    <form class="insert-form">
+                        <div>
+                            <div class="form-name">작성자</div>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div>
+                            <div class="form-name">제목</div>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div>
+                            <div class="form-name">내용</div>
+                            <div class="form-control form-content-insert">
+                                <ul class="content-insert-tools">
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-image"></i>
+                                        <p>사진</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-cloud-download-alt"></i>
+                                        <p>SNS 사진</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-video"></i>
+                                        <p>동영상</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-smile"></i>
+                                        <p>스티커</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-quote-left"></i>
+                                        <p>인용구</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <div class="line-wrap">
+                                            <div class="line"></div>
+                                            <i class="fa fa-angle-down"></i>
+                                        </div>
+                                        <p>구분선</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-map-marker-alt"></i>
+                                        <p>장소</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-link"></i>
+                                        <p>링크</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-folder-plus"></i>
+                                        <p>파일</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-calendar-alt"></i>
+                                        <p>일정</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-code"></i>
+                                        <p>소스코드</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-table"></i>
+                                        <p>표</p>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <i class="fa fa-square-root-alt"></i>
+                                        <p>수식</p>
+                                    </li>
+                                </ul>
+                                <ul class="content-style-tools">
+                                    <li>
+                                        <select>
+                                            <option value="">본문</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select>
+                                            <option value="">나눔스퀘어</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select>
+                                            <option value="">13</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <div class="divider"></div>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bold"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-italic"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-underline"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-strikethrough"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-strikethrough"></i>
+                                    </li>
+                                    <li>
+                                        <div class="divider"></div>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-align-center"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-text-height"></i>
+                                    </li>
+                                    <li>
+                                        <div class="divider"></div>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-superscript"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-subscript"></i>
+                                    </li>
+                                    <li>
+                                        <span>※</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-link"></i>
+                                    </li>
+                                    <li>
+                                        <div class="divider"></div>
+                                    </li>
+                                    <li>
+                                        <select>
+                                            <option value="">맞춤법</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="insert-btns">
+                            <button type="button" class="bBlue">등록</button>
+                            <button type="button" style="background: #878787;">수정</button>
+                            <button type="button" class="bRed">취소</button>
+                        </div>
+                    </form>
+                
+                </div>
+            </section>
+        </article>
+
+    </div>
+
+</div>
+
+</body>
+</html>

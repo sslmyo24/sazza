@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>회원관리-사짜회원</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/member.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../assets/js/common.min.js"></script>
+</head>
+<body>
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="../assets/images/common/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="">전체회원</a></li>
+                    <li class="active"><a href="../members/lists-sazza.html">사짜회원</a></li>
+                    <li ><a href="../members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+
+            <div class="page-header no-border">
+                <h2 class="page-title">사짜회원</h2>
+            </div>
+
+            <ul class="common-tab">
+                <li class="active"><a href="">전체</a></li>
+                <li><a href="">변호사</a></li>
+                <li><a href="">변리사</a></li>
+                <li><a href="">법무사</a></li>
+                <li><a href="">공인노무사</a></li>
+                <li><a href="">공인회계사</a></li>
+                <li><a href="">세무사</a></li>
+                <li><a href="">손해사정사</a></li>
+                <li><a href="">가맹거래사</a></li>
+                <li><a href="">경영컨설팅</a></li>
+                <li><a href="">통역/번역</a></li>
+                <li><a href="">행정사</a></li>
+                <li><a href="">속기사</a></li>
+                <li><a href="">입시컨설팅</a></li>
+                <li><a href="">전문레슨</a></li>
+            </ul>
+
+            <div class="member-info-panel">
+                <ul class="member-info-summary">
+                    <li>
+                        <i class="icon-user"></i>
+                        <dl>
+                            <dt>총가입자 수</dt>
+                            <dd>60</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-check"></i>
+                        <dl>
+                            <dt>정상</dt>
+                            <dd>256</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-hand-wait"></i>
+                        <dl>
+                            <dt>승인대기</dt>
+                            <dd>256</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-star"></i>
+                        <dl>
+                            <dt>특별승인</dt>
+                            <dd>51</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-user-minus"></i>
+                        <dl>
+                            <dt>이용정지</dt>
+                            <dd>51</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-user-del"></i>
+                        <dl>
+                            <dt>삭제</dt>
+                            <dd>51</dd>
+                        </dl>
+                    </li>
+                </ul>
+
+            </div>
+
+            <form class="search-form">
+                <div class="form-control-select W190">
+                    <select>
+                        <option value="">회원등급</option>
+                        <option>일반</option>
+                    </select>
+                </div>
+
+                <hr class="divider">
+                <div class="form-control-select W190">
+                    <select>
+                        <option value="">시/도 선택</option>
+                    </select>
+                </div>
+                <div class="form-control-select W190">
+                    <select>
+                        <option value="">시/도 이하 선택</option>
+                    </select>
+                </div>
+                <input class="form-control MR12" style="width:635px;">
+                <button class="btn-search">검색</button>
+            </form>
+
+            <div class="page-content">
+                <table class="table scroll-body list-hover striped">
+                    <thead>
+                        <tr>
+                            <th class="W100">번호</th>
+                            <th class="W115">성명</th>
+                            <th class="W115">직업</th>
+                            <th class="W175">사무소명</th>
+                            <th class="W175">주소</th>
+                            <th class="W135">사무소</th>
+                            <th class="W125">휴대폰</th>
+                            <th class="W55">조회</th>
+                            <th class="W55">추천</th>
+                            <th class="W55">공개</th>
+                            <th class="W55">비공개</th>
+                            <th class="W130">회원가입일</th>
+                            <th class="W55">상태</th>
+                            <th class="W75">경로</th>
+                            <th class="W150">접속횟수/최근접속</th>
+                            <th class="flexible">삭제</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr data-anchor="view-member" data-id="30">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W115">홍길동</td>
+                            <td class="text-center W115">변호사</td>
+                            <td class="text-left W175">법부법인 인화</td>
+                            <td class="text-left W175">서울 강남구 (서초동)</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">33</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">13</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">정상</td>
+                            <td class="text-center W75">우편물</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="29">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W115 select">선우재덕</td>
+                            <td class="text-center W115">경영지도사</td>
+                            <td class="text-left W175">희망나라경영컨설팅</td>
+                            <td class="text-left W175">충북 청주시</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">21</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">25</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">대기</td>
+                            <td class="text-center W75">블로그</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="28">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W115">홍길동</td>
+                            <td class="text-center W115">변호사</td>
+                            <td class="text-left W175">법부법인 인화</td>
+                            <td class="text-left W175">서울 강남구 (서초동)</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">33</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">13</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">정상</td>
+                            <td class="text-center W75">우편물</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="27">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W115">선우재덕</td>
+                            <td class="text-center W115">경영지도사</td>
+                            <td class="text-left W175">희망나라경영컨설팅</td>
+                            <td class="text-left W175">충북 청주시</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">21</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">25</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">대기</td>
+                            <td class="text-center W75">블로그</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="26">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W115">홍길동</td>
+                            <td class="text-center W115">변호사</td>
+                            <td class="text-left W175">법부법인 인화</td>
+                            <td class="text-left W175">서울 강남구 (서초동)</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">33</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">13</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">정상</td>
+                            <td class="text-center W75">우편물</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="25">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W115">선우재덕</td>
+                            <td class="text-center W115">경영지도사</td>
+                            <td class="text-left W175">희망나라경영컨설팅</td>
+                            <td class="text-left W175">충북 청주시</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">21</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">25</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">대기</td>
+                            <td class="text-center W75">블로그</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="24">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W115">홍길동</td>
+                            <td class="text-center W115">변호사</td>
+                            <td class="text-left W175">법부법인 인화</td>
+                            <td class="text-left W175">서울 강남구 (서초동)</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">33</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">13</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">정상</td>
+                            <td class="text-center W75">우편물</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="23">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W115">선우재덕</td>
+                            <td class="text-center W115">경영지도사</td>
+                            <td class="text-left W175">희망나라경영컨설팅</td>
+                            <td class="text-left W175">충북 청주시</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">21</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">25</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">대기</td>
+                            <td class="text-center W75">블로그</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="22">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W115">홍길동</td>
+                            <td class="text-center W115">변호사</td>
+                            <td class="text-left W175">법부법인 인화</td>
+                            <td class="text-left W175">서울 강남구 (서초동)</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">33</td>
+                            <td class="text-center W55">12</td>
+                            <td class="text-center W55">13</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">정상</td>
+                            <td class="text-center W75">우편물</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="21">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W115">선우재덕</td>
+                            <td class="text-center W115">경영지도사</td>
+                            <td class="text-left W175">희망나라경영컨설팅</td>
+                            <td class="text-left W175">충북 청주시</td>
+                            <td class="text-center W135">02-1234-1234</td>
+                            <td class="text-center W125">010-1234-1234</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">21</td>
+                            <td class="text-center W55">15</td>
+                            <td class="text-center W55">25</td>
+                            <td class="text-center W130">20.03.04 13:55</td>
+                            <td class="text-center W55">대기</td>
+                            <td class="text-center W75">블로그</td>
+                            <td class="text-center W150">20 / 20.03.04 13:55</td>
+                            <td class="text-center flexible">
+                                <div></div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="page-footer">
+                <ol class="pagination">
+                <li class="prev"><a href=""><i class="far fa-angle-left"></i>&nbsp;이전</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li><a href="">7</a></li>
+                <li class="active"><a href="">8</a></li>
+                <li><a href="">9</a></li>
+                <li><a href="">10</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">12</a></li>
+                <li><a href="">13</a></li>
+                <li class="next"><a href="">다음&nbsp;<i class="far fa-angle-right"></i></a></li>
+            </ol>
+
+            </div>
+
+            <script>
+                $(function() {
+                   // 리스트 클릭시 상세보기로 이동
+                   $(document).on('click','[data-anchor="view-member"]', function(e) {
+                       e.preventDefault();
+
+                       // GET으로 넘겨줄 데이타 가져오기 (sample)
+                       var member_id = $(this).data('id');
+                       // member_id 값이 지정되어있지 않으면 return;
+                       if(typeof member_id == 'undefined' || ! member_id) return;
+
+                       document.location = 'view-sazza.html?id='+member_id;
+                   });
+                });
+            </script>
+
+
+        </article>
+
+    </div>
+</div>
+
+</body>
+</html>
+

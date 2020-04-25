@@ -1,0 +1,143 @@
+.page-content > .content-header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.page-content .btn-option {
+	width: 159px;
+	height: 34px;
+	box-sizing: border-box;
+	border: 1px solid #3385ee;
+	background: #f7f7f5;
+	color: #3385ee;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+.table td {
+	text-align: center;
+}
+
+.table .btn-delete {
+	width: 68px;
+	height: 26px;
+	border: none;
+	color: #fff;
+	border-radius: 3px;
+}
+
+.insert-form > div {
+	line-height: 40px;
+	display: flex;
+	margin-bottom: 12px;
+}
+
+.insert-form .form-name {
+	width: 120px;
+	padding-left: 23px;
+}
+
+.insert-form .form-content-insert {
+	padding: 0;
+	height: 512px;
+}
+
+.insert-form .content-insert-tools {
+	padding-left: 20px;
+	height: 61px;
+	border-bottom: 1px solid #e5e5e5;
+	display: flex;
+}
+
+.insert-form .content-insert-tools > li {
+	padding-top: 5px;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin-right: 17px;
+	flex-wrap: wrap;
+	color: #777777;
+	align-content: center;
+	position: relative;
+}
+
+.insert-form .content-insert-tools a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.insert-form .content-insert-tools > li > * {
+	height: 50%;
+}
+
+
+.insert-form .content-insert-tools .line-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+}
+
+.insert-form .content-insert-tools .line {
+	width: 18px;
+	height: 1px;
+	background: #777777;
+	margin-right: 10px;
+}
+
+.insert-form .content-insert-tools p {
+	width: 100%;
+	line-height: 25px;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.content-style-tools {
+	padding-left: 15px;
+	display: flex;
+	align-content: center;
+	height: 46px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.content-style-tools > li {
+	height: 100%;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.content-style-tools select {
+	font-size: 14px;
+	height: 100%;
+	border: none;
+	padding-right: 13px;
+	font-weight: 300;
+}
+
+.divider {
+	width: 1px;
+	height: 15px;
+	background: #e5e5e5;
+}
+
+.insert-btns {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.insert-btns > button {
+	width: 78px;
+	height: 40px;
+	border: none;
+	color: #fff;
+	font-size: 15px;
+	margin-left: 10px;
+}

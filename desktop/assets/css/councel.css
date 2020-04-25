@@ -1,0 +1,72 @@
+.date-tab .year > a {
+	width: 145px;
+	padding: 0 18px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.date-tab .highlight > a {
+	color: red;
+}
+
+.search-form {
+	padding: 50px 42px !important;
+	justify-content: space-between;
+}
+
+.search-form > * {
+	display: flex;
+	align-items: center;
+}
+
+.search-form {
+	padding: 50px 42px !important;
+}
+
+.search-form .form-control-select > select {
+	font-size: 12px !important;
+	padding: 0 0 0 7px !important;
+	-webkit-appearance: menulist;
+	-moz-appearance: menulist;
+	appearance: menulist;
+}
+
+.search-form .form-name {
+	margin: 0 10px 0 20px;
+	font-size: 14px;
+}
+
+.search-form .btn-search {
+	margin-left: 24px;
+	width: 80px;
+	height: 40px;
+	font-size: 14px;
+}
+
+.councel-data {
+	width: 390px;
+}
+
+.councel-data > .form-control {
+	padding: 0 !important;
+	text-align: center;
+	line-height: 38px;
+	width: 88px;
+	height: 38px;
+	font-size: 13px;
+}
+
+.councel-data span {
+	color: #3385ee;
+}
+
+.page-content > .table .table-btn {
+	width: 67px;
+	height: 30px;
+	font-size: 13px;
+	color: #fff;
+	border-radius: 3px;
+	border: none;
+}

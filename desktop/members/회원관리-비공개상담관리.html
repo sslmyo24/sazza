@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>회원관리-비공개상담관리</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/councel.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../assets/js/common.min.js"></script>
+</head>
+<body>
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="http://sazza.kr/design//members/lists-client.html">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="../assets/images/common/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">전체회원</a></li>
+                    <li><a href="http://sazza.kr/design//members/lists-sazza.html">사짜회원</a></li>
+                    <li class="active"><a href="http://sazza.kr/design//members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+
+
+            <div class="page-header no-border">
+                <h2 class="page-title">비공개 상담 관리</h2>
+            </div>
+
+            <ul class="common-tab date-tab">
+                <li class="active year"><a href=""><i class="fa fa-caret-left"></i></i>2020<i class="fa fa-caret-right"></i></a></li>
+                <li><a href="">01</a></li>
+                <li><a href="">02</a></li>
+                <li class="highlight"><a href="">03</a></li>
+                <li><a href="">04</a></li>
+                <li><a href="">05</a></li>
+                <li><a href="">06</a></li>
+                <li><a href="">07</a></li>
+                <li><a href="">08</a></li>
+                <li><a href="">09</a></li>
+                <li><a href="">10</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">12</a></li>
+            </ul>
+
+            <div class="search-form">
+                <form>
+                    <div class="form-control-select W85">
+                        <select>
+                            <option value="">사짜분류</option>
+                        </select>
+                    </div>
+                    <div class="form-control-select W85">
+                        <select>
+                            <option value="">대분류</option>
+                        </select>
+                    </div>
+                    <div class="form-control-select W85">
+                        <select>
+                            <option value="">키워드</option>
+                        </select>
+                    </div>
+                    <div class="form-control-select W85">
+                        <select>
+                            <option value="">유형</option>
+                        </select>
+                    </div>
+                    <div class="form-name">의뢰인</div>
+                    <input class="form-control W190">        
+                    <div class="form-name">사짜</div>
+                    <input class="form-control W190">
+                    <div class="form-name">제목</div>
+                    <input class="form-control W190">
+                    <button class="btn-search">검색</button>
+                </form>
+
+                <div class="councel-data">
+                    <div class="form-name">상담신청</div>
+                    <div class="form-control bWhite">오늘(<span>25</span>)</div>
+                    <div class="form-control bWhite">1주일(<span>156</span>)</div>
+                    <div class="form-control bWhite">당월(<span>756</span>)</div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <table class="table scroll-body list-hover striped">
+                    <thead>
+                    <tr>
+                        <th class="W100">번호</th>
+                        <th class="W95">사짜분류</th>
+                        <th class="W90">대분류</th>
+                        <th class="W90">키워드</th>
+                        <th class="W110">의뢰인</th>
+                        <th class="flexible">상담제목</th>
+                        <th class="W160">상담신청일</th>
+                        <th class="W160">상담예약일</th>
+                        <th class="W115">답변등록일</th>
+                        <th class="W80">후기</th>
+                        <th class="W80">추천</th>
+                        <th class="W80">평점</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr data-anchor="view-member" data-id="30">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="29">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="28">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="27">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="26">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="25">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="24">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="23">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="22">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="21">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="20">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="19">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="18">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="17">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="16">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="15">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="14">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="13">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="12">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="11">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="10">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="9">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="8">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="7">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="6">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="5">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="4">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="3">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="2">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">변호사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">4</td>
+                        </tr>
+
+                        <tr data-anchor="view-member" data-id="1">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W95">세무사</td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W90"></td>
+                            <td class="text-center W110">이순신</td>
+                            <td class="text-center flexible"></td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W160">20.03.04 (월) 13:55</td>
+                            <td class="text-center W115">20.03.04 (월)</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">○ X</td>
+                            <td class="text-center W80">3</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div id="deleteModal">
+                <div class="wrap">
+                    <a href="#" class="modal-close"><i class="fa fa-times"></i></a>
+                    <p>이 공개상담 건을 정말로 삭제 하시겠습니까?</p>
+                    <div>
+                        <button type="button" class="btn-action bRed">확인</button>
+                        <button type="button" class="btn-cancel bWhite" onclick="location.href = '#modalClose'">취소</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <ol class="pagination">
+                <li class="prev"><a href="http://sazza.kr/design//members/lists-client.html"><i class="far fa-angle-left"></i>&nbsp;이전</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">4</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">5</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">6</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">7</a></li>
+                <li class="active"><a href="http://sazza.kr/design//members/lists-client.html">8</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">9</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">10</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">11</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">12</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">13</a></li>
+                <li class="next"><a href="http://sazza.kr/design//members/lists-client.html">다음&nbsp;<i class="far fa-angle-right"></i></a></li>
+            </ol>
+
+            </div>
+
+        </article>
+
+    </div>
+</div>
+
+</body>
+</html>

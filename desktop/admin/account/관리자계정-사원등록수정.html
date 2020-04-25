@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>관리자계정-사원등록수정</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../../assets/js/common.min.js"></script>
+</head>
+<body>
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="http://sazza.kr/design//members/lists-client.html">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="../../assets/images/common/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">전체회원</a></li>
+                    <li><a href="http://sazza.kr/design//members/lists-sazza.html">사짜회원</a></li>
+                    <li class="active"><a href="http://sazza.kr/design//members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+
+            <div class="page-header PB90">
+                <h2 class="page-title">관리자 계정 관리</h2>
+            </div>
+
+            <div class="page-content bWhite P35">
+                <h4 class="content-title">사원 등록(수정)</h4>
+                <form class="member-form">
+                    <div class="form-section">
+                        <div class="form-name">아이디</div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-section">
+                        <div class="form-name">현재 비밀번호</div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-section">
+                        <div class="form-name">변경 비밀번호</div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-section">
+                        <div class="form-name">성명</div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-section">
+                        <div class="form-name">부서</div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-section">
+                        <div class="form-name">직위</div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-section">
+                        <div class="form-name">직통전화</div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-section">
+                        <div class="form-name">메일주소</div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-section">
+                        <div class="form-name">상태</div>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="member-btns">
+                        <div class="form-btns">
+                            <button type="button" class="btn-action bBlue">저장합니다.</button>
+                            <button type="button" class="btn-cancel bRed">취소</button>
+                        </div>
+                        <button type="button" class="btn-option" onclick="location.href = '#optionModal'">권한설정 보기</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <div id="optionModal">
+                <div class="wrap">
+                    <div class="modal-header bBlue">
+                        사원등록수정
+                        <a href="#" class="modal-close"><i class="fa fa-times"></i></a>
+                    </div>
+                    <div class="modal-content">
+                        <div class="content-header">
+                            <h4 class="modal-content-title">비밀번호 초기화</h4>
+                            <div class="input-button checkbox">
+                                <input type="checkbox" id="pwReset">
+                                <label for="pwReset"></label>
+                                <i class="check-sign fa fa-check"></i>
+                            </div>
+                        </div>
+                        <table class="table" cellspacing="0">
+                            <caption>※ 사원 권한 설정 기능입니다.</caption>
+                            <colgroup>
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%">
+                                <col width="25%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>회원관리</th>
+                                    <th>통계관리</th>
+                                    <th>영업관리</th>
+                                    <th>사원권한관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            모두가능
+                                            <div class="input-button radio">
+                                                <input type="radio" checked name="memberManagement" id="memberManagementAll">
+                                                <label for="memberManagementAll"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            모두가능
+                                            <div class="input-button radio">
+                                                <input type="radio" checked name="statisManagement" id="statisManagementAll">
+                                                <label for="statisManagementAll"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            모두가능
+                                            <div class="input-button radio">
+                                                <input type="radio" checked name="salesManagement" id="salesManagementAll">
+                                                <label for="salesManagementAll"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            모두가능
+                                            <div class="input-button radio">
+                                                <input type="radio" checked name="employManagement" id="employManagementAll">
+                                                <label for="employManagementAll"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            일부불가
+                                            <div class="input-button radio">
+                                                <input type="radio" name="memberManagement" id="memberManagementLittle">
+                                                <label for="memberManagementLittle"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            일부불가
+                                            <div class="input-button radio">
+                                                <input type="radio" name="statisManagement" id="statisManagementLittle">
+                                                <label for="statisManagementLittle"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            일부불가
+                                            <div class="input-button radio">
+                                                <input type="radio" name="salesManagement" id="salesManagementLittle">
+                                                <label for="salesManagementLittle"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            일부불가
+                                            <div class="input-button radio">
+                                                <input type="radio" name="employManagement" id="employManagementLittle">
+                                                <label for="employManagementLittle"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="content-header set-state">
+                            <h4 class="modal-content-title">상태설정</h4>
+                            <div class="option-name">정상</div>
+                            <div class="input-button radio">
+                                <input type="radio" name="state" checked id="state1">
+                                <label for="state1"></label>
+                                <div class="check-sign bBlue"></div>
+                            </div>
+                            <div class="option-name">정지</div>
+                            <div class="input-button radio">
+                                <input type="radio" name="state" id="state2">
+                                <label for="state2"></label>
+                                <div class="check-sign bBlue"></div>
+                            </div>
+                            <div class="option-name">퇴사</div>
+                            <div class="input-button radio">
+                                <input type="radio" name="state" id="state3">
+                                <label for="state3"></label>
+                                <div class="check-sign bBlue"></div>
+                            </div>
+                        </div>
+
+                        <div class="modal-btns">
+                            <button type="button" class="bWhite btn-submit">작성완료</button>
+                            <button type="button" class="bWhite btn-cancel" onclick="location.href = '#'">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</body>
+</html>

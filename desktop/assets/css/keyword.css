@@ -1,0 +1,166 @@
+table {
+	border-top: 2px solid #c4c4c4;
+	width: 100%;
+}
+
+table th,
+table td:first-child {
+	font-weight: bold;
+	background: #f7f7f7;
+}
+
+table tr > :not(:last-child) {
+	border-right: 1px solid #c4c4c4;
+}
+
+table th, table td {
+	font-size: 14px;
+	text-align: center;
+}
+
+table td > * {
+	margin: 0 auto;
+}
+
+table th,
+table tr > td {
+	height: 46px;
+	border-bottom: 1px solid #c4c4c4;
+}
+
+.border-tr > td {
+	border-top: 2px solid #c4c4c4;
+}
+
+table > caption {
+	caption-side: top;
+	text-align: right;
+	font-size: 15px;
+	margin: 0;
+	padding: 0 ;
+}
+
+.table-btns {
+	margin-top: 16px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.table-btns .btn-action {
+	border: none;
+	width: 150px;
+	height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 3px;
+}
+
+.divide-btns > button {
+	width: 100px;
+	height: 40px;
+	border: 1px solid;
+	font-weight: bold;
+	font-size: 16px;
+	background: #fff;
+	margin-right: 8px;
+	border-radius: 3px;
+}
+
+.divide-btns > button:nth-child(1) {
+	border-color: #3384ed;
+	color: #3384ed;
+}
+
+.divide-btns > button:nth-child(2) {
+	border-color: #80bafa;
+	color: #80bafa;
+}
+
+.divide-btns > button:nth-child(3) {
+	border-color: #ff6b67;
+	color: #ff6b67;
+}
+
+.divide-btns > button:nth-child(4) {
+	border-color: #fc9596;
+	color: #fc9596;
+}
+
+.divide-btns > button:nth-child(5) {
+	border-color: #686868;
+	color: #686868;
+}
+
+.board-table {
+	width: 100%;
+	border-top: 2px solid #c4c4c4;
+	border-bottom: 1px solid #c4c4c4;
+}
+
+.board-table > .tr {
+	border-bottom: 1px solid #c4c4c4;
+	height: 47px;
+	display: flex;
+}
+
+.board-table .td {
+	height: 100%;
+}
+
+.board-table .td-label {
+	line-height: 46px;
+	text-align: center;
+	width: 200px;
+	background: #f7f7f7;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.board-table .td-label:first-child {
+	border-right: 1px solid #c4c4c4;
+}
+
+.board-table .td-wrap {
+	display: flex;
+	align-items: center;
+	width: calc(100% - 200px);
+	background: #fff;
+	padding: 6px;
+}
+
+.board-table .form-control {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #c4c4c4;
+}
+
+.update-btns > button {
+	background: #fff;
+}
+
+.update-btns > button:not(:last-child) {
+	margin-right: 10px;
+}
+
+.btn-update {
+	border: 2px solid #fc9596 !important;
+	color: #fc9596!important;
+}
+
+.btn-complete {
+	border: 2px solid #ff6b67 !important;
+	color: #ff6b67!important;
+}
+
+.btn-delete {
+	border: 2px solid #939393 !important;
+	color: #939393!important;
+}
+
+.btn-cancel {
+	border: 2px solid #686868 !important;
+	color: #686868 !important;
+}
+

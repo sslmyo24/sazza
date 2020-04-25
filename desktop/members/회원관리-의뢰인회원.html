@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>회원관리-의뢰인회원</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/member.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../assets/js/common.min.js"></script>
+</head>
+<body style="">
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="http://sazza.kr/design//members/lists-client.html">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="../assets/images/common/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">전체회원</a></li>
+                    <li><a href="http://sazza.kr/design//members/lists-sazza.html">사짜회원</a></li>
+                    <li class="active"><a href="http://sazza.kr/design//members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+
+
+            <div class="page-header">
+                <h2 class="page-title">의뢰인회원</h2>
+            </div>
+
+            <div class="member-info-panel">
+                <ul class="member-info-summary">
+                    <li>
+                        <i class="icon-user"></i>
+                        <dl>
+                            <dt>총가입자 수</dt>
+                            <dd>135</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-check"></i>
+                        <dl>
+                            <dt>정상</dt>
+                            <dd>100</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-hand-wait"></i>
+                        <dl>
+                            <dt>승인대기</dt>
+                            <dd>5</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-star"></i>
+                        <dl>
+                            <dt>휴면</dt>
+                            <dd>15</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-user-minus"></i>
+                        <dl>
+                            <dt>탈퇴</dt>
+                            <dd>3</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-user-del"></i>
+                        <dl>
+                            <dt>정지</dt>
+                            <dd>15</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <i class="icon-user-del"></i>
+                        <dl>
+                            <dt>삭제</dt>
+                            <dd>15</dd>
+                        </dl>
+                    </li>
+                </ul>
+
+            </div>
+
+            <form class="search-form">
+                <div class="form-control-select W80 MR12">
+                    <select>
+                        <option value="">상태</option>
+                    </select>
+                </div>
+                <div class="form-control-select W80">
+                    <select>
+                        <option value="">경로</option>
+                    </select>
+                </div>
+                <div class="form-name">성명</div>
+                <input class="form-control W185">
+                <div class="form-name">휴대폰</div>
+                <input class="form-control W185 MR15">
+                <button class="btn-search">검색</button>
+            </form>
+
+            <div class="page-content">
+                <table class="table scroll-body list-hover striped">
+                    <thead>
+                        <tr>
+                            <th class="W100">번호</th>
+                            <th class="W140">성명</th>
+                            <th class="W80">1:1총</th>
+                            <th class="W80">전화</th>
+                            <th class="W80">방문</th>
+                            <th class="W80">서면</th>
+                            <th class="W140">공개신청</th>
+                            <th class="W140">공개답변</th>
+                            <th class="W160">휴대폰</th>
+                            <th class="W180">회원가입일</th>
+                            <th class="W100">경로</th>
+                            <th class="flexible">접속횟수/최근접속</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr data-anchor="view-member" data-id="30">
+                            <td class="text-right W100 select">101</td>
+                            <td class="text-center W140">홍길동</td>
+                            <td class="text-center W80">합계</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W80">33</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W140">123</td>
+                            <td class="text-center W140">1156</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">우편물</td>
+                            <td class="text-left flexible"><span class="red">75</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                        <tr data-anchor="view-member" data-id="29">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W140">선우재덕</td>
+                            <td class="text-center W80">건수</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W80">21</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">블로그</td>
+                            <td class="text-left flexible"><span class="red">12345</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                        <tr data-anchor="view-member" data-id="28">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W140">홍길동</td>
+                            <td class="text-center W80">합계</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W80">33</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W140">123</td>
+                            <td class="text-center W140">1156</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">우편물</td>
+                            <td class="text-left flexible"><span class="red">75</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                        <tr data-anchor="view-member" data-id="27">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W140">선우재덕</td>
+                            <td class="text-center W80">건수</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W80">21</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">블로그</td>
+                            <td class="text-left flexible"><span class="red">12345</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                        <tr data-anchor="view-member" data-id="26">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W140">홍길동</td>
+                            <td class="text-center W80">합계</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W80">33</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W140">123</td>
+                            <td class="text-center W140">1156</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">우편물</td>
+                            <td class="text-left flexible"><span class="red">75</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                        <tr data-anchor="view-member" data-id="25">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W140">선우재덕</td>
+                            <td class="text-center W80">건수</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W80">21</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">블로그</td>
+                            <td class="text-left flexible"><span class="red">12345</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                        <tr data-anchor="view-member" data-id="24">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W140">홍길동</td>
+                            <td class="text-center W80">합계</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W80">33</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W140">123</td>
+                            <td class="text-center W140">1156</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">우편물</td>
+                            <td class="text-left flexible"><span class="red">75</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                        <tr data-anchor="view-member" data-id="23">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W140">선우재덕</td>
+                            <td class="text-center W80">건수</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W80">21</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">블로그</td>
+                            <td class="text-left flexible"><span class="red">12345</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                        <tr data-anchor="view-member" data-id="22">
+                            <td class="text-right W100">101</td>
+                            <td class="text-center W140">홍길동</td>
+                            <td class="text-center W80">합계</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W80">33</td>
+                            <td class="text-center W80">12</td>
+                            <td class="text-center W140">123</td>
+                            <td class="text-center W140">1156</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">우편물</td>
+                            <td class="text-left flexible"><span class="red">75</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                        <tr data-anchor="view-member" data-id="21">
+                            <td class="text-right W100">12345</td>
+                            <td class="text-center W140">선우재덕</td>
+                            <td class="text-center W80">건수</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W80">21</td>
+                            <td class="text-center W80">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W140">15</td>
+                            <td class="text-center W160">010-1234-1234</td>
+                            <td class="text-center W180">20.03.04 (월) 13:55</td>
+                            <td class="text-center W100">블로그</td>
+                            <td class="text-left flexible"><span class="red">12345</span> 20.03.04 (월) 13:5513:55</td>
+                        </tr>
+                                       
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="page-footer">
+                <ol class="pagination">
+                <li class="prev"><a href="http://sazza.kr/design//members/lists-client.html"><i class="far fa-angle-left"></i>&nbsp;이전</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">4</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">5</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">6</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">7</a></li>
+                <li class="active"><a href="http://sazza.kr/design//members/lists-client.html">8</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">9</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">10</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">11</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">12</a></li>
+                <li><a href="http://sazza.kr/design//members/lists-client.html">13</a></li>
+                <li class="next"><a href="http://sazza.kr/design//members/lists-client.html">다음&nbsp;<i class="far fa-angle-right"></i></a></li>
+            </ol>
+
+            </div>
+
+
+            <script>
+                $(function() {
+                    // 리스트 클릭시 상세보기로 이동
+                    $(document).on('click','[data-anchor="view-member"]', function(e) {
+                        e.preventDefault();
+
+                        // GET으로 넘겨줄 데이타 가져오기 (sample)
+                        var member_id = $(this).data('id');
+                        // member_id 값이 지정되어있지 않으면 return;
+                        if(typeof member_id == 'undefined' || ! member_id) return;
+
+                        document.location = 'view-client.html?id='+member_id;
+                    });
+                });
+            </script>
+
+
+        </article>
+
+    </div>
+</div>
+
+</body>
+</html>

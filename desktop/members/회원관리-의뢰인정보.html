@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>회원관리-의뢰인정보</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/detail.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../assets/js/common.min.js"></script>
+</head>
+<body>
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="http://sazza.kr/design//members/view-client.html?id=30">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="http://sazza.kr/design//members/view-client.html?id=30">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="http://sazza.kr/design//members/view-client.html?id=30">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sazza.kr/design//members/view-client.html?id=30">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="./회원관리-의뢰인회원-홍길동변호사_files/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">전체회원</a></li>
+                    <li class="active"><a href="http://sazza.kr/design//members/lists-sazza.html">사짜회원</a></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+
+            <section>
+                <div class="page-header PB90">
+                    <h2 class="page-title">의뢰인 정보</h2>
+                </div>
+                
+                <div class="page-content bWhite P35">
+                
+                    <form>
+                        <h4 class="content-title">기본정보</h4>
+                
+                        <div class="table-wrap">
+                            <div class="board-table">
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">성명</div>
+                                        <div class="td-wrap">홍길동 (남)</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-wrap PL20" style="width: 100%; background: #fff;">
+                                            (1970, 51세 - 출생/한국나이)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">구분</div>
+                                        <div class="td-wrap">
+                                            <div class="input-label">사짜</div>
+                                            <div class="input-button checkbox MR55">
+                                                <input type="checkbox" id="sazza">
+                                                <label for="sazza"></label>
+                                                <i class="check-sign fa fa-check"></i>
+                                            </div>
+                                            <div class="input-label">의뢰인</div>
+                                            <div class="input-button checkbox">
+                                                <input type="checkbox" id="client">
+                                                <label for="client"></label>
+                                                <i class="check-sign fa fa-check"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">아이디</div>
+                                        <div class="td-wrap">yundosa</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">회원가입일</div>
+                                        <div class="td-wrap">2020.03.12 (월) 15:31</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">가입경로</div>
+                                        <div class="td-wrap">신문(가입경로)</div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="board-table">
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">발송하기</div>
+                                        <div class="td-wrap">
+                                            <button type="button" class="btn-border">카톡</button>
+                                            <button type="button" class="btn-border">문자</button>
+                                            <button type="button" class="btn-border">푸쉬</button>
+                                            <button type="button" class="btn-border">메일</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">휴대폰</div>
+                                        <div class="td-wrap">
+                                            010-1234-1234
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">이메일</div>
+                                        <div class="td-wrap">
+                                            yundosa@email.net
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">탈퇴/정지일</div>
+                                        <div class="td-wrap">
+                                            2020.03.12 (윌) 15:31
+                                        </div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">정지사유</div>
+                                        <div class="td-wrap">
+                                            불량회원
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <h4 class="content-title MT40">상담정보</h4>
+
+                        <table class="table MB20">
+                            <colgroup>
+                                <col width="9.09%">
+                                <col width="9.09%">
+                                <col width="9.09%">
+                                <col width="9.09%">
+                                <col width="9.09%">
+                                <col width="9.09%">
+                                <col width="9.09%">
+                                <col width="9.09%">
+                                <col width="9.09%">
+                                <col width="9.09%">
+                                <col width="9.09%">
+                            </colgroup>
+                            <tr>
+                                <th rowspan="4">상담이용(비공개/공개)</th>
+                                <th style="background: #e1effc;">변호사</th>
+                                <th>변리사</th>
+                                <th>법무사</th>
+                                <th>공인노무사</th>
+                                <th style="background: #e1effc;">공인회계사</th>
+                                <th>세무사</th>
+                                <th>관세사</th>
+                                <th>손해사정사</th>
+                                <th>경영컨설턴트</th>
+                                <th>경영지도사</th>
+                            </tr>
+                            <tr>
+                                <td style="background: #e1effc;"><span style="color: #ff6b67">5</span> / <span style="color: #3385ee">15</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="background: #e1effc;"><span style="color: #ff6b67">5</span> / <span style="color: #3385ee">15</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>기술지도사</th>
+                                <th>가맹거래사</th>
+                                <th>입시컨설턴트</th>
+                                <th>청소년상담사</th>
+                                <th>감정평가사</th>
+                                <th>행정사</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">구분</th>
+                                    <th colspan="4" style="background: #e1effc">비공개 합계</th>
+                                    <th colspan="3">전화상담</th>
+                                    <th colspan="3">방문상담</th>
+                                    <th colspan="3">서면상담</th>
+                                    <th colspan="2" style="background: #e1effc">공개상담</th>
+                                </tr>
+                                <tr>
+                                    <th style="background: #e1effc">신청</th>
+                                    <th style="background: #e1effc">답변</th>
+                                    <th style="background: #e1effc">추천</th>
+                                    <th style="background: #e1effc">평점</th>
+                                    <th>신청</th>
+                                    <th>답변</th>
+                                    <th>추천</th>
+                                    <th>신청</th>
+                                    <th>답변</th>
+                                    <th>추천</th>
+                                    <th>신청</th>
+                                    <th>답변</th>
+                                    <th>추천</th>
+                                    <th style="background: #e1effc">답변</th>
+                                    <th style="background: #e1effc">추천</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="background: #f7f7f7; font-weight: bold">당월건수</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td rowspan="4">4.5</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td style="background: #f7f7f7; font-weight: bold">최근 3개월</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td style="background: #f7f7f7; font-weight: bold">최근 1년</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td style="background: #f7f7f7; font-weight: bold">누적 건수</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="table-caption">비공개상담내역</div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="W70">번호</th>
+                                    <th class="W95">의뢰인</th>
+                                    <th class="W95">대분류</th>
+                                    <th class="W95">키워드</th>
+                                    <th class="W95">유형</th>
+                                    <th class="flexible">상담제목</th>
+                                    <th class="W140">상담신청일</th>
+                                    <th class="W140">상담예약일</th>
+                                    <th class="W140">답변등록일</th>
+                                    <th class="W100">후기</th>
+                                    <th class="W100">추천</th>
+                                    <th class="W100">평점</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>전화</td>
+                                    <td></td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>○ X</td>
+                                    <td>○ X</td>
+                                    <td>4</td>
+                                </tr>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>방문</td>
+                                    <td></td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>X</td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>○ X</td>
+                                    <td>○ X</td>
+                                    <td>4</td>
+                                </tr>
+                            <tbody>
+                                <tr>
+                                    <td>3</td>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>서면</td>
+                                    <td></td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>X</td>
+                                    <td>○ X</td>
+                                    <td>○ X</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="table-caption">공개상담내역</div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="W70">번호</th>
+                                    <th class="W95">의뢰인</th>
+                                    <th class="W95">대분류</th>
+                                    <th class="W95">키워드</th>
+                                    <th class="flexible">상담제목</th>
+                                    <th class="W140">상담신청일</th>
+                                    <th class="W140">상담예약일</th>
+                                    <th class="W140">총답변수</th>
+                                    <th class="W100">추천</th>
+                                    <th class="W100">조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>○ X</td>
+                                    <td>○ X</td>
+                                </tr>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>X</td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>○ X</td>
+                                    <td>○ X</td>
+                                </tr>
+                            <tbody>
+                                <tr>
+                                    <td>3</td>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>20.03.22(월) 12:26</td>
+                                    <td>X</td>
+                                    <td>○ X</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="board-table MT40">
+                            <div class="tr" style="height: 145px;">
+                                <div class="td">
+                                    <div class="td-label" style="line-height: 103px;">관리자 메모</div>
+                                    <div class="td-wrap" style="align-items: flex-start; padding: 20px;">
+                                        관리자 메모
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-btns">
+                            <button type="button" class="bBlue MR10">작성완료</button>
+                            <button type="button" class="bRed">취소</button>
+                        </div>
+
+                    </form>
+                
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

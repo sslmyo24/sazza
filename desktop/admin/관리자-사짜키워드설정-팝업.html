@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>관리자-사짜키워드설정</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/keyword.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../assets/js/common.min.js"></script>
+</head>
+<body>
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="http://sazza.kr/design//members/lists-client.html">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="../assets/images/common/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">전체회원</a></li>
+                    <li><a href="http://sazza.kr/design//members/lists-sazza.html">사짜회원</a></li>
+                    <li class="active"><a href="http://sazza.kr/design//members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+    
+            <section class="scroll-body">
+                <div class="page-header PB90">
+                    <h2 class="page-title">관리자 사짜분류 / 키워드 / 이벤트 설정</h2>
+                </div>
+                
+                <div class="page-content bWhite P35">
+                    <h4 class="content-title">사짜분류 설정</h4>
+                
+                    <table>
+                        <tbody>
+                            <colgroup>
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                            </colgroup>
+                            <tr>
+                                <td rowspan="3">사짜 분류</td>
+                                <td style="background: #f7f7f7; font-weight: bold;">사짜명</td>
+                                <td>변호사</td>
+                                <td>변리사</td>
+                                <td>법무사</td>
+                                <td>공인노무사</td>
+                                <td>공인회계사</td>
+                                <td>세무사</td>
+                                <td>관세사</td>
+                                <td>손해사정사</td>
+                                <td>경영컨설턴트</td>
+                                <td>경영지도사</td>
+                                <td>기술지도사</td>
+                                <td>가맹거래사</td>
+                                <td>입시컨설턴트</td>
+                                <td>청소년상담사</td>
+                                <td>감정평가사</td>
+                            </tr>
+                            <tr>
+                                <td>선택</td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza1" checked>
+                                        <label for="sazza1"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza2">
+                                        <label for="sazza2"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza3">
+                                        <label for="sazza3"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza4">
+                                        <label for="sazza4"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza5">
+                                        <label for="sazza5"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza6">
+                                        <label for="sazza6"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza7">
+                                        <label for="sazza7"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza8">
+                                        <label for="sazza8"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza9">
+                                        <label for="sazza9"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza10">
+                                        <label for="sazza10"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza11">
+                                        <label for="sazza11"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza12">
+                                        <label for="sazza12"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza13">
+                                        <label for="sazza13"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza14">
+                                        <label for="sazza14"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza15">
+                                        <label for="sazza15"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>순서</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <tbody>
+                            <colgroup>
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                                <col width="5.55%">
+                            </colgroup>
+                            <tr>
+                                <td rowspan="3">사짜 분류</td>
+                                <td style="background: #f7f7f7; font-weight: bold;">사짜명</td>
+                                <td>행정사</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>선택</td>
+                                <td>
+                                    <div class="input-button radio">
+                                        <input type="radio" name="sazza" id="sazza16" checked>
+                                        <label for="sazza16"></label>
+                                        <div class="check-sign bBlue"></div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>순서</td>
+                                <td>16</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-btns">
+                        <div></div>
+                        <div class="update-btns">
+                            <button type="button" class="btn-action btn-update" onclick="location.href = '#updateModal'">수정</button>
+                            <button type="button" class="btn-action btn-complete">완료</button>
+                            <button type="button" class="btn-action btn-delete">삭제</button>
+                            <button type="button" class="btn-action btn-cancel">취소</button>
+                        </div>
+                    </div>
+
+                    <h4 class="content-title MT40 MB0">키워드 설정</h4>
+                
+                    <table>
+                        <caption>(단위:천원)</caption>
+                        <colgroup>
+                            <col width="4.43%">
+                            <col width="6.32%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>대분류</th>
+                                <th style="background: #3384ed; color: #fff">변호사</th>
+                                <th colspan="15">상세키워드 분류</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: 400; border-bottom: none">형사</td>
+                                <td style="background: #f7f7f7; font-weight: bold;">키워드</td>
+                                <td>키워드1</td>
+                                <td>키워드2</td>
+                                <td>키워드3</td>
+                                <td>키워드4</td>
+                                <td>키워드5</td>
+                                <td>키워드6</td>
+                                <td>키워드7</td>
+                                <td>키워드8</td>
+                                <td>키워드9</td>
+                                <td>키워드10</td>
+                                <td>키워드11</td>
+                                <td>키워드12</td>
+                                <td>키워드13</td>
+                                <td>키워드14</td>
+                                <td>키워드15</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 400; border-bottom: none">50</td>
+                                <td style="background: #f7f7f7;">금액</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 400; border-bottom: none">200</td>
+                                <td style="background: #f7f7f7;">상담수</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 400; border-bottom: none">1</td>
+                                <td style="background: #f7f7f7;">순서</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                            <tr class="border-tr">
+                                <td rowspan="4" style="border-top: none;"></td>
+                                <td style="background: #f7f7f7; font-weight: bold;">키워드</td>
+                                <td>키워드16</td>
+                                <td>키워드17</td>
+                                <td>키워드18</td>
+                                <td>키워드19</td>
+                                <td>키워드20</td>
+                                <td>키워드21</td>
+                                <td>키워드22</td>
+                                <td>키워드23</td>
+                                <td>키워드24</td>
+                                <td>키워드25</td>
+                                <td>키워드26</td>
+                                <td>키워드27</td>
+                                <td>키워드28</td>
+                                <td>키워드29</td>
+                                <td>키워드30</td>
+                            </tr>
+                            <tr>
+                                <td>금액</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>상담수</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>순서</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-btns">
+                        <div></div>
+                        <div class="update-btns">
+                            <button type="button" class="btn-action btn-update" onclick="location.href = '#updateModal'">수정</button>
+                            <button type="button" class="btn-action btn-complete">완료</button>
+                            <button type="button" class="btn-action btn-delete">삭제</button>
+                            <button type="button" class="btn-action btn-cancel">취소</button>
+                        </div>
+                    </div>
+
+                    <table class="MT40">
+                        <colgroup>
+                            <col width="4.43%">
+                            <col width="6.32%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                        </colgroup>
+                        <tbody>
+                            <tr class="border-tr">
+                                <td style="font-weight: 400; background: #e2efff; border-bottom: none">성범죄</td>
+                                <td style="background: #e2efff; font-weight: bold;">키워드</td>
+                                <td>키워드1</td>
+                                <td>키워드2</td>
+                                <td>키워드3</td>
+                                <td>키워드4</td>
+                                <td>키워드5</td>
+                                <td>키워드6</td>
+                                <td>키워드7</td>
+                                <td>키워드8</td>
+                                <td>키워드9</td>
+                                <td>키워드10</td>
+                                <td>키워드11</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 400; background: #e2efff; border-bottom: none">50</td>
+                                <td style="background: #e2efff;">금액</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 400; background: #e2efff;border-bottom: none">155</td>
+                                <td style="background: #e2efff;">상담수</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 400; background: #e2efff;">2</td>
+                                <td style="background: #e2efff;">순서</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-btns">
+                        <div></div>
+                        <div class="update-btns">
+                            <button type="button" class="btn-action btn-update" onclick="location.href = '#updateModal'">수정</button>
+                            <button type="button" class="btn-action btn-complete">완료</button>
+                            <button type="button" class="btn-action btn-delete">삭제</button>
+                            <button type="button" class="btn-action btn-cancel">취소</button>
+                        </div>
+                    </div>
+
+                    <table class="MT40">
+                        <colgroup>
+                            <col width="4.43%">
+                            <col width="6.32%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                            <col width="5.58%">
+                        </colgroup>
+                        <tbody>
+                            <tr class="border-tr">
+                                <td style="font-weight: 400; border-bottom: none">이혼</td>
+                                <td style="background: #f7f7f7; font-weight: bold;">키워드</td>
+                                <td>키워드1</td>
+                                <td>키워드2</td>
+                                <td>키워드3</td>
+                                <td>키워드4</td>
+                                <td>키워드5</td>
+                                <td>키워드6</td>
+                                <td>키워드7</td>
+                                <td>키워드8</td>
+                                <td>키워드9</td>
+                                <td>키워드10</td>
+                                <td>키워드11</td>
+                                <td>키워드12</td>
+                                <td>키워드13</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 400; border-bottom: none">50</td>
+                                <td style="background: #f7f7f7;">금액</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 400; border-bottom: none">155</td>
+                                <td style="background: #f7f7f7;">상담수</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 400;">2</td>
+                                <td style="background: #f7f7f7;">순서</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-btns PB40" style="border-bottom: 2px solid #c4c4c4;">
+                        <div></div>
+                        <div class="update-btns">
+                            <button type="button" class="btn-action btn-update" onclick="location.href = '#updateModal'">수정</button>
+                            <button type="button" class="btn-action btn-complete">완료</button>
+                            <button type="button" class="btn-action btn-delete">삭제</button>
+                            <button type="button" class="btn-action btn-cancel">취소</button>
+                        </div>
+                    </div>
+
+
+                    <div class="table-btns">
+                        <div class="divide-btns">
+                            <button type="button">대분류추가</button>
+                            <button type="button">대분류수정</button>
+                            <button type="button">대분류완료</button>
+                            <button type="button">대분류삭제</button>
+                            <button type="button">취소</button>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+
+                    <h4 class="content-title MT40">약정기간별 할인율 설정</h4>
+                
+                    <table>
+                        <colgroup>
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>약정기간</th>
+                                <th style="font-weight: 400;">1개월</th>
+                                <th style="font-weight: 400;">3개월</th>
+                                <th style="font-weight: 400;">6개월</th>
+                                <th style="font-weight: 400;">1년</th>
+                                <th style="font-weight: 400;">적용개시일</th>
+                                <th style="font-weight: 400;">종료일</th>
+                                <th style="font-weight: 400;">관리자 메모</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>약정기간</td>
+                                <td></td>
+                                <td>10%</td>
+                                <td>20%</td>
+                                <td>30%</td>
+                                <td>2020.03.01</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="MT20">
+                        <colgroup>
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                            <col width="12.5%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>변경이력사항</td>
+                                <td></td>
+                                <td>10%</td>
+                                <td>20%</td>
+                                <td>30%</td>
+                                <td>2020.03.01</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-btns">
+                        <div></div>
+                        <div class="update-btns">
+                            <button type="button" class="btn-action btn-complete">완료</button>
+                            <button type="button" class="btn-action btn-update">수정</button>
+                            <button type="button" class="btn-action btn-cancel">취소</button>
+                        </div>
+                    </div>
+
+                    <h4 class="content-title MT40">약정기간별 할인율 설정</h4>
+
+                    <div class="board-table">
+                        <div class="tr">
+                            <div class="td-label">이벤트 제목</div>
+                            <div class="td-wrap">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="tr" style="height: 97px;">
+                            <div class="td-label" style="line-height: 97px;">이벤트 상세내용</div>
+                            <div class="td-wrap">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td-label">특별 할인율</div>
+                            <div class="td-wrap">
+                                <input type="text" class="form-control" style="width: 125px; height: 34px; margin-right: 4px;"> %
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td-label">이벤트 적용기간</div>
+                            <div class="td-label">적용개시일</div>
+                            <div class="td-wrap" style="width: calc(50% - 300px)"></div>
+                            <div class="td-label">종료일</div>
+                            <div class="td-wrap" style="width: calc(50% - 300px)"></div>
+                        </div>
+                    </div>
+                    <div class="table-btns">
+                        <div></div>
+                        <div class="update-btns">
+                            <button type="button" class="btn-action btn-complete" onclick="location.href = '#eventModal'">완료</button>
+                            <button type="button" class="btn-action btn-update" onclick="location.href = '#eventModal'">수정</button>
+                            <button type="button" class="btn-action btn-cancel" onclick="location.href = '#eventModal'">취소</button>
+                        </div>
+                    </div>
+
+                    <div class="board-table MT40">
+                        <div class="tr">
+                            <div class="td-label">이벤트 이력사항</div>
+                            <div class="td-wrap" style="padding-left: 23px; width: 470px;">이벤트 제목</div>
+                            <div class="td-label W120">할인율</div>
+                            <div class="td-wrap W80" style="padding-left: 16px;">10%</div>
+                            <div class="td-label W120">적용개시일</div>
+                            <div class="td-wrap" style="width: 240px; padding-left: 15px;">2020.03.15</div>
+                            <div class="td-label W120">종료일</div>
+                            <div class="td-wrap" style="width: 230px; padding-left: 14px;">2020.03.15</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div id="updateModal" class="confirmModal">
+                <div class="wrap">
+                    <a href="#" class="modal-close"><i class="fa fa-times"></i></a>
+                    <p>정말 수정할까요?</p>
+                    <div>
+                        <button type="button" class="btn-action bRed">확인</button>
+                        <button type="button" class="btn-cancel bWhite" onclick="location.href = '#'">취소</button>
+                    </div>
+                </div>
+            </div>
+            <div id="eventModal" class="confirmModal">
+                <div class="wrap">
+                    <a href="#" class="modal-close"><i class="fa fa-times"></i></a>
+                    <p>이벤트 설정을 정말 적용할까요?</p>
+                    <div>
+                        <button type="button" class="btn-action bRed">확인</button>
+                        <button type="button" class="btn-cancel bWhite" onclick="location.href = '#'">취소</button>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</body>
+</html>

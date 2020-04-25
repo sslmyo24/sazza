@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>관리자통계-일자별비공개상담</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/statistics.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../../assets/js/common.min.js"></script>
+</head>
+<body>
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="http://sazza.kr/design//members/lists-client.html">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sazza.kr/design//members/lists-client.html">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="../../assets/images/common/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">전체회원</a></li>
+                    <li><a href="http://sazza.kr/design//members/lists-sazza.html">사짜회원</a></li>
+                    <li class="active"><a href="http://sazza.kr/design//members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+
+            <section class="scroll-body">
+                <div class="page-header no-border">
+                    <h2 class="page-title PT20 PB30">일자별 비공개상담 유형별 통계</h2>
+                </div>
+                
+                <ul class="common-tab date-tab">
+                    <li class="active year"><a href=""><i class="fa fa-caret-left"></i></i>2020<i class="fa fa-caret-right"></i></a></li>
+                    <li><a href="">01</a></li>
+                    <li><a href="">02</a></li>
+                    <li><a href="" style="color: #ff6b67;">03</a></li>
+                    <li><a href="">04</a></li>
+                    <li><a href="">05</a></li>
+                    <li><a href="">06</a></li>
+                    <li><a href="">07</a></li>
+                    <li><a href="">08</a></li>
+                    <li><a href="">09</a></li>
+                    <li><a href="">10</a></li>
+                    <li><a href="">11</a></li>
+                    <li><a href="">12</a></li>
+                </ul>
+
+                
+                <div class="page-content P35">
+                    
+                    <div class="filter-form">
+                        <div class="form-control-select">
+                            <select>
+                                <option value="">3월 1주차 보기</option>
+                            </select>
+                        </div>
+                        <div class="form-control-select">
+                            <select>
+                                <option value="">3월 2주차 보기</option>
+                            </select>
+                        </div>
+                        <div class="form-control-select">
+                            <select>
+                                <option value="">3월 3주차 보기</option>
+                            </select>
+                        </div>
+                        <div class="form-control-select">
+                            <select>
+                                <option value="">3월 4주차 보기</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <table>
+                        <caption>(단위:건)</caption>
+                        <thead>
+                            <tr>
+                                <th rowspan="3" style="font-weight: bold;">2020년<span style="color: #ff6b67">3</span>월<br><span style="color: #ff6b67">1</span>주차</th>
+                                <th rowspan="2" colspan="3" style="font-weight: bold;">주간합계</th>
+                                <th colspan="3">2</th>
+                                <th colspan="3">3</th>
+                                <th colspan="3">4</th>
+                                <th colspan="3">5</th>
+                                <th colspan="3">6</th>
+                                <th colspan="3" class="saturday">7</th>
+                                <th colspan="3" class="sunday">8</th>
+                            </tr>
+                            <tr>
+                                <th colspan="3">월</th>
+                                <th colspan="3">화</th>
+                                <th colspan="3">수</th>
+                                <th colspan="3">목</th>
+                                <th colspan="3">금</th>
+                                <th colspan="3" class="saturday">토</th>
+                                <th colspan="3" class="sunday">일</th>
+                            </tr>
+                            <tr>
+                                <th>전화</th>
+                                <th>방문</th>
+                                <th>서면</th>
+                                <th>전화</th>
+                                <th>방문</th>
+                                <th>서면</th>
+                                <th>전화</th>
+                                <th>방문</th>
+                                <th>서면</th>
+                                <th>전화</th>
+                                <th>방문</th>
+                                <th>서면</th>
+                                <th>전화</th>
+                                <th>방문</th>
+                                <th>서면</th>
+                                <th>전화</th>
+                                <th>방문</th>
+                                <th>서면</th>
+                                <th>전화</th>
+                                <th>방문</th>
+                                <th>서면</th>
+                                <th>전화</th>
+                                <th>방문</th>
+                                <th>서면</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>사짜 합계</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>변호사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>변리사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>법무사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>공인노무사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>공인회계사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>세무사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>관세사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>손해사정사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>경영컨설턴트</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>경영지도사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>기술지도사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>가맹거래사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>입시컨설턴트</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>청소년상담사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>감정평가사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>행정사</td>
+                                <td></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td style="background: #f0f7fd"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+</div>
+
+</body>
+</html>

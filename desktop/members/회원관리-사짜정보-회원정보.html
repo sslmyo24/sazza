@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>회원관리-사짜정보-회원정보</title>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/detail.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="../assets/js/common.min.js"></script>
+</head>
+<body>
+
+<div class="application">
+    <header class="application-header">
+        <a class="logo" href="http://sazza.kr/design//members/view-client.html?id=30">사짜 관리자</a>
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="http://sazza.kr/design//members/view-client.html?id=30">
+                        <i class="fas"></i>
+                        <span class="menu-name">등록관리</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="http://sazza.kr/design//members/view-client.html?id=30">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-name">회원관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sazza.kr/design//members/view-client.html?id=30">
+                        <i class="fas"></i>
+                        <span class="menu-name">상품관리</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <figure class="user-thumb">
+                <img src="./회원관리-의뢰인회원-홍길동변호사_files/user-thumb.png" alt="홍길동님의 프로필 사진">
+            </figure>
+            <span class="user-name">홍길동 님</span>
+        </div>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </header>
+    <div class="application-body">
+
+        <aside class="application-left-aside">
+            <nav class="left-menu">
+                <ul>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">전체회원</a></li>
+                    <li class="active"><a href="http://sazza.kr/design//members/lists-sazza.html">사짜회원</a></li>
+                    <li><a href="http://sazza.kr/design//members/lists-client.html">의뢰인회원</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">출석체크 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">관리자 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">탈퇴회원 관리</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://sazza.kr/design//members/view-client.html?id=30">휴면회원 관리</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="application-contents">
+
+            <section>
+                <div class="page-header no-border PB50 PT50">
+                    <h2 class="page-title">홍길동 변호사</h2>
+                </div>
+                
+                <ul class="common-tab">
+                    <li class="active"><a href="">기본 정보 보기</a></li>
+                    <li><a href="./회원관리-사짜정보-상담내역.html">상담내역 보기</a></li>
+                </ul>
+                
+                <div class="page-content bWhite P35">
+                
+                    <form>
+                        <h4 class="content-title">기본정보</h4>
+                
+                        <div class="table-wrap">
+                            <div class="board-table">
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">성명</div>
+                                        <div class="td-wrap">홍길동 (남)</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">사짜분류</div>
+                                        <div class="td-wrap">변호사</div>
+                                    </div>                            
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">구분</div>
+                                        <div class="td-wrap">
+                                            <div class="input-label">사짜</div>
+                                            <div class="input-button checkbox MR55">
+                                                <input type="checkbox" id="sazza">
+                                                <label for="sazza"></label>
+                                                <i class="check-sign fa fa-check"></i>
+                                            </div>
+                                            <div class="input-label">의뢰인</div>
+                                            <div class="input-button checkbox">
+                                                <input type="checkbox" id="client">
+                                                <label for="client"></label>
+                                                <i class="check-sign fa fa-check"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-wrap PL20" style="width: 100%; background: #fff;">
+                                            (1970, 51세 - 출생/한국나이)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">사무소명</div>
+                                        <div class="td-wrap">홍길동전문법률사무소</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">추천</div>
+                                        <div class="td-wrap">추천건수</div>
+                                    </div>                            
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">아이디</div>
+                                        <div class="td-wrap">yundosa</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">조회</div>
+                                        <div class="td-wrap">조회건수</div>
+                                    </div>                            
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">주소</div>
+                                        <div class="td-wrap">(12345) 서울특별시 강남구 태헤란로 27-1</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">회원가입일</div>
+                                        <div class="td-wrap">2020.03.12 (월) 15:31</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">가입경로</div>
+                                        <div class="td-wrap">신문</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">관리자 메모</div>
+                                        <div class="td-wrap">프리미엄 신청인데 VIP로 우대(20.03.25)</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">회원상태</div>
+                                        <div class="td-wrap">
+                                            <div class="input-label">정상</div>
+                                            <div class="input-button radio MR55">
+                                                <input type="radio" name="state" id="state1" checked>
+                                                <label for="state1"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                            <div class="input-label">승인대기</div>
+                                            <div class="input-button radio MR55">
+                                                <input type="radio" name="state" id="state2">
+                                                <label for="state2"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                            <div class="input-label">휴면</div>
+                                            <div class="input-button radio MR55">
+                                                <input type="radio" name="state" id="state3">
+                                                <label for="state3"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                            <div class="input-label">탈퇴/정지</div>
+                                            <div class="input-button radio MR55">
+                                                <input type="radio" name="state" id="state4">
+                                                <label for="state4"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                            <div class="input-label">삭제</div>
+                                            <div class="input-button radio">
+                                                <input type="radio" name="state" id="state5">
+                                                <label for="state5"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="board-table">
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">발송하기</div>
+                                        <div class="td-wrap">
+                                            <button type="button" class="btn-border">카톡</button>
+                                            <button type="button" class="btn-border">문자</button>
+                                            <button type="button" class="btn-border">푸쉬</button>
+                                            <button type="button" class="btn-border">메일</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">휴대폰</div>
+                                        <div class="td-wrap">
+                                            010-1234-1234
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">사무소전화</div>
+                                        <div class="td-wrap">
+                                            031-1234-1234
+                                        </div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">안심번호</div>
+                                        <div class="td-wrap">
+                                            050-1234-1234
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">이메일</div>
+                                        <div class="td-wrap">
+                                            yundosa@hanmail.net
+                                        </div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">신지식인</div>
+                                        <div class="td-wrap">
+                                            ○
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">위치메모</div>
+                                        <div class="td-wrap">
+                                            교대역 3번출구 뒷골목, 주차장 없음
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">결제유효일</div>
+                                        <div class="td-wrap">
+                                            2021.03.11 <p style="color: #ff6b67; text-align: right; width: 100%; padding-right: 20px">(153일 전)</p>
+                                        </div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">최근결제일</div>
+                                        <div class="td-wrap">
+                                            2020.03.12
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">키워드 서비스</div>
+                                        <div class="td-wrap">
+                                            <div class="input-label">Y</div>
+                                            <div class="input-button radio MR5">
+                                                <input type="radio" name="keyword" id="keywordY">
+                                                <label for="keywordY"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                            <p style="color: #ff6b67; margin-right: 52px">(31)</p>
+                                            <div class="input-label">N</div>
+                                            <div class="input-button radio MR5">
+                                                <input type="radio" name="keyword" id="keywordN" checked>
+                                                <label for="keywordN"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">약정기간</div>
+                                        <div class="td-wrap">
+                                            <div class="input-label">1개월</div>
+                                            <div class="input-button radio MR20">
+                                                <input type="radio" name="period" id="period1M" checked>
+                                                <label for="period1M"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                            <div class="input-label">6개월</div>
+                                            <div class="input-button radio MR20">
+                                                <input type="radio" name="period" id="period6M">
+                                                <label for="period6M"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                            <div class="input-label">1년</div>
+                                            <div class="input-button radio MR20">
+                                                <input type="radio" name="period" id="period1Y">
+                                                <label for="period1Y"></label>
+                                                <div class="check-sign bBlue"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">탈퇴/정지일</div>
+                                        <div class="td-wrap">2020.03.12 (월) 15:31</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">정지사유</div>
+                                        <div class="td-wrap">자진탈퇴/간첩</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <h4 class="content-title MT40">자격정보</h4>
+                
+                        <div class="table-wrap">
+                            <div class="board-table">
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">사짜분류</div>
+                                        <div class="td-wrap">변호사</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">자격취득년도</div>
+                                        <div class="td-wrap">변호사</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label no-border">경력사항</div>
+                                        <div class="td-wrap">
+                                            <span class="MR15">2011~2020</span>
+                                            <span>서울중앙지검장</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label no-border"></div>
+                                        <div class="td-wrap">
+                                            <span class="MR15">2011~2020</span>
+                                            <span>서울중앙지검 차장검사</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label no-border"></div>
+                                        <div class="td-wrap">
+                                            <span class="MR15">2011~2021</span>
+                                            <span>서울중앙지검 차장검사</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label"></div>
+                                        <div class="td-wrap">
+                                            <span class="MR15">2011~2022</span>
+                                            <span>서울중앙지검 차장검사</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="board-table">
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">출신시험(횟수)</div>
+                                        <div class="td-wrap">사법시험 25회</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">사짜면허증</div>
+                                        <div class="td-wrap">
+                                            <button type="button" class="btn-border">첨부파일 <i class="fa fa-times-circle" style="margin-left:18px;"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label no-border">학력사항</div>
+                                        <div class="td-wrap">
+                                            <span class="MR15">2020</span>
+                                            <span>서울대학교 법학전문대학원 법학 박사</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label no-border"></div>
+                                        <div class="td-wrap">
+                                            <span class="MR15">2020</span>
+                                            <span>경희대학교 경영대학원 경영학 박사</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label no-border"></div>
+                                        <div class="td-wrap">
+                                            <span class="MR15">2020</span>
+                                            <span>경희대학교 무역학과 학사</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label"></div>
+                                        <div class="td-wrap"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="board-table MT20">
+                            <div class="tr">
+                                <div class="td">
+                                    <div class="td-label" style="width: 220px;">다른면허 보유</div>
+                                    <div class="td-wrap">
+                                        변리사,의사,한의사,공인중개사
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="td">
+                                    <div class="td-label" style="width: 220px;">사짜 프로필 홍보글 제목</div>
+                                    <div class="td-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="td">
+                                    <div class="td-label" style="width: 220px;">사짜 프로필 안내글 내용</div>
+                                    <div class="td-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tr">
+                                <div class="td">
+                                    <div class="td-label" style="width: 220px;">사짜 프로필 홍보용 상장</div>
+                                    <div class="td-wrap">
+                                        <button type="button" class="btn-border">첨부파일1 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        <button type="button" class="btn-border">첨부파일2 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        <button type="button" class="btn-border">첨부파일3 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        <button type="button" class="btn-border">첨부파일4 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        <button type="button" class="btn-border">첨부파일5 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        <button type="button" class="btn-border">첨부파일6 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        <button type="button" class="btn-border">첨부파일7 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        <button type="button" class="btn-border">첨부파일8 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        <p style="text-align: right; padding-right: 20px;">※ 최대 8개까지 첨부할 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="content-title MT40">키워드 설정<span style="color: #ff6b67">(75)</span></h4>
+
+                        <table class="keyword-table">
+                            <thead>
+                                <tr>
+                                    <th class="W120">대분류<span class="red">(153)</span></th>
+                                    <th class="flexible">소분류<span class="red">(36)</span></th>
+                                    <th class="W130">키워드 서비스<span class="red">(55)</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="W120">성범죄<span class="red">(13)</span></td>
+                                    <td class="flexible">
+                                        <div class="keyword-list">
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                지하철성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                지하철성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                성추행<i class="fa fa-times-circle"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="W130">
+                                        <button type="button" class="insert-btn">추가</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="W120">지식재산권<span class="red">(15)</span></td>
+                                    <td class="flexible">
+                                        <div class="keyword-list">
+                                            <div class="keyword-btn">
+                                                영업비밀<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                상표권<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                저작권<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                특허권<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                초상권<i class="fa fa-times-circle"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="W130">
+                                        <button type="button" class="insert-btn">추가</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="W120">형사사건<span class="red">(2)</span></td>
+                                    <td class="flexible">
+                                        <div class="keyword-list">
+                                            <div class="keyword-btn">
+                                                특허등록<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                상표등록<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                특허침해<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                무단사용<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                디자인등록<i class="fa fa-times-circle"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="W130">
+                                        <button type="button" class="insert-btn">추가</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="W120">교통사고<span class="red">(7)</span></td>
+                                    <td class="flexible">
+                                        <div class="keyword-list">
+                                            <div class="keyword-btn">
+                                                교통사고<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                보험금<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                산재사망<i class="fa fa-times-circle"></i>
+                                            </div>
+                                            <div class="keyword-btn">
+                                                장해등급<i class="fa fa-times-circle"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="W130">
+                                        <button type="button" class="insert-btn">추가</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="table-wrap MT20">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="W130"></th>
+                                        <th class="W120">순번</th>
+                                        <th class="flexible">결제일시</th>
+                                        <th class="W155">결제금액</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="3" style="background: #f7f7f7; font-weight: bold;">최근 결제정보</td>
+                                        <td>1</td>
+                                        <td>2020.03.01 15:30</td>
+                                        <td>150,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2020.03.01 15:30</td>
+                                        <td>150,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2020.03.01 15:30</td>
+                                        <td>150,000원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="W80 bBlue">대분류</th>
+                                        <th class="W80">키워드</th>
+                                        <th class="W150">약정기간</th>
+                                        <th class="W100">자동결제 동의</th>
+                                        <th class="flexible">관리자 메모</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="W80" style="font-weight: bold">5</td>
+                                        <td class="W80">30</td>
+                                        <td class="W150">1개월, 3개월</td>
+                                        <td class="W100">Y</td>
+                                        <td class="flexible"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="W80" style="font-weight: bold">5</td>
+                                        <td class="W80">30</td>
+                                        <td class="W150">1개월, 3개월</td>
+                                        <td class="W100">Y</td>
+                                        <td class="flexible"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="W80" style="font-weight: bold">5</td>
+                                        <td class="W80">30</td>
+                                        <td class="W150">1개월, 3개월</td>
+                                        <td class="W100">Y</td>
+                                        <td class="flexible"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <button type="button" class="insert-btn MT10">더보기<span class="ML10">+</span></button>
+
+                        <h4 class="content-title MT40">사업자등록증 및 계좌정보</h4>
+
+                        <div class="table-wrap">
+                            <div class="board-table">
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">사업자상호</div>
+                                        <div class="td-wrap">사업자등록증 상호</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">사업자대표</div>
+                                        <div class="td-wrap">세종대왕</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">담당자</div>
+                                        <div class="td-wrap">홍길동</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">사업자주소</div>
+                                        <div class="td-wrap">서울특별시 강남구 테헤란로 27-10, 202호 (사짜빌딩, 서초동)</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">은행</div>
+                                        <div class="td-wrap">국민은행</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">계좌번호</div>
+                                        <div class="td-wrap">123-15-365-265</div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">약정서</div>
+                                        <div class="td-wrap">
+                                            <button type="button" class="btn-border">첨부파일1 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">약정서</div>
+                                        <div class="td-wrap">
+                                            <button type="button" class="btn-border">첨부파일2 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="board-table">
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">사업자번호</div>
+                                        <div class="td-wrap">123-12-12345</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">안심번호</div>
+                                        <div class="td-wrap">
+                                            <button type="button" class="btn-border">첨부파일1 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">업태</div>
+                                        <div class="td-wrap">서비스</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">종목</div>
+                                        <div class="td-wrap">
+                                            변호사
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">세금계산서 메일</div>
+                                        <div class="td-wrap">000@naver.com</div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label"></div>
+                                        <div class="td-wrap">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">통장사본</div>
+                                        <div class="td-wrap">
+                                            <button type="button" class="btn-border">첨부파일1 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label"></div>
+                                        <div class="td-wrap">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">
+                                        <div class="td-label">약정서</div>
+                                        <div class="td-wrap">
+                                            <button type="button" class="btn-border">첨부파일1 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="td">
+                                        <div class="td-label">약정서</div>
+                                        <div class="td-wrap">
+                                            <button type="button" class="btn-border">첨부파일2 <i class="fa fa-times-circle" style="margin-left:12px;"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="board-table MT20">
+                            <div class="tr" style="height: 103px;">
+                                <div class="td">
+                                    <div class="td-label" style="line-height: 103px;">관리자 메모</div>
+                                    <div class="td-wrap" style="align-items: flex-start; padding: 20px;">
+                                        관리자 메모
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-btns">
+                            <button type="button" class="bBlue MR10">작성완료</button>
+                            <button type="button" class="bRed">취소</button>
+                        </div>
+
+                    </form>
+                
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
